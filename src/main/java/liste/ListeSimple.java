@@ -1,6 +1,7 @@
 package liste;
 
-public class ListeSimple {
+public class ListeSimple
+{
     private long size;
     Noeud tete;
 
