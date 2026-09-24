@@ -20,11 +20,11 @@ jobs:
           distribution: corretto
           java-version: '21'
 
+      - name: Let's build the package
+        run: mvn -B javadoc:javadoc
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./target/reports/apidocs/
-
-      - name: Let's build the package
-        run: mvn -B javadoc::javadoc
+          publish_dir: ./target/apidocs/
