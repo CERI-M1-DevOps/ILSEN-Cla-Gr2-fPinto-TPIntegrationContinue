@@ -14,6 +14,11 @@ public class ListeSimple
         size++;
     }
 
+    /**
+     * Modifie la valeur du premier nœud contenant l'élément recherché
+     * @param element l'élément à rechercher dans la liste
+     * @param nouvelleValeur la nouvelle valeur à affecter au nœud trouvé
+     */
     public void modifiePremier(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null && courant.getElement() != element)
@@ -31,6 +36,11 @@ public class ListeSimple
         }
     }
 
+    /**
+     * Retourne une représentation textuelle de la liste
+     * Les éléments sont affichés dans l'ordre et séparés par des virgules
+     * @return une chaîne représentant le contenu de la liste
+     */
     public String toString() {
         StringBuilder sb = new StringBuilder("ListeSimple(");
         Noeud n = tete;
@@ -64,6 +74,11 @@ public class ListeSimple
         }
     }
 
+    /**
+     * Supprime de la liste tous les nœuds contenant l'élément spécifié
+     * La suppression est effectuée de manière récursive
+     * @param element l'élément dont toutes les occurrences doivent être supprimées
+     */
     public void supprimeTous(int element) {
        tete = supprimeTousRecurs(element, tete);
     }
@@ -118,6 +133,11 @@ public class ListeSimple
         return precedent;
     }
 
+    /**
+     * Échange la position de deux nœuds dans la liste
+     * @param r1 le premier nœud à échanger
+     * @param r2 le deuxième nœud à échanger
+     */
     public void echanger(Noeud r1, Noeud r2) {
         if (r1 == r2) {
             return;
